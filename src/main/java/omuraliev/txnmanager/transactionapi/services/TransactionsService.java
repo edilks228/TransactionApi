@@ -28,13 +28,11 @@ public class TransactionsService {
         this.userRepository = userRepository;
     }
 
-    @Transactional
     public User save(UserDto userDto){
         User user = new User(userDto.getName(),userDto.getEmail());
         return userRepository.save(user);
     }
 
-    @Transactional
     public void deposit(Long userId, BigDecimal amount){
         User user = userRepository.findById(userId).orElse(null);
         if(user == null){
