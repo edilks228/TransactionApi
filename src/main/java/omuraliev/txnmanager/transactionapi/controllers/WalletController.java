@@ -67,6 +67,12 @@ public class WalletController {
     }
 
 
+    @GetMapping("/get_all")
+    public ResponseEntity<List<Transaction>> getAllTransactions() {
+        return ResponseEntity.ok(transactionsService.getUserTransactions(1L));
+    }
+
+
 
     //Exception Handlers
     @ExceptionHandler(UserNotFoundException.class)
