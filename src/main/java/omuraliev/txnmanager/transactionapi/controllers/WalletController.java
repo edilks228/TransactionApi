@@ -105,4 +105,8 @@ public class WalletController {
         );
         return new ResponseEntity<>(transactionErrorResponse, HttpStatus.BAD_REQUEST);
     }
+
+    public static void some(){
+        System.out.println("ЭТО ГАВНО ЕЩЕ С МЭЙНА");
+    }
 }
