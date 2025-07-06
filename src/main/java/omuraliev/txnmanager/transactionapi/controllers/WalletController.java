@@ -106,6 +106,10 @@ public class WalletController {
         return new ResponseEntity<>(transactionErrorResponse, HttpStatus.BAD_REQUEST);
     }
 
+    public static void hereShit(){
+        System.out.println("сейчас я попробую сделать rebase");
+    }
+
     public static void some(){
         System.out.println("ЭТО ГАВНО ЕЩЕ С МЭЙНА");
     }
